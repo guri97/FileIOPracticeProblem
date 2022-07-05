@@ -30,13 +30,19 @@ namespace FileIO
                 read.Close();
             }
         }
+        public static void CopyFile()
+        {
+            string path = @"C:\Users\GURPREET SINGH\Desktop\VisualStudio\FileIOTextFile";
+            string CopyPath = @"C:\Users\GURPREET SINGH\Desktop\VisualStudio\FileIOTextFile";
+            File.Copy(path, CopyPath);
+        }
         public static void Main(string[] args)
         {
 
 
             FileExist();
             ReadFile();
-
+            CopyFile();
 
         }
     }
