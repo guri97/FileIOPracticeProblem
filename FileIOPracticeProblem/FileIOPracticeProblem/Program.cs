@@ -63,17 +63,28 @@ namespace FileIO
             }
             Console.ReadKey();//it will wait for a key press
         }
+        public static void WriteUsingStreamWriter()
+        {
+            string path = @"C:\Users\GURPREET SINGH\Desktop\VisualStudio\FileIOTextFile";
+            using (StreamWriter sr = File.AppendText(path))
+            {
+                sr.WriteLine("Hello world.net class");
+                sr.Close();
+                Console.WriteLine(File.ReadAllText(path));
+            }
+            Console.ReadKey();
+        }
         public static void Main(string[] args)
         {
 
 
             FileExist();
-
             ReadFile();
             CopyFile();
             DeleteFile();
             ReadAllText();
             WriteUsingStreamWriter();
+            ReadStreamReader();
 
         }
     }
