@@ -50,15 +50,30 @@ namespace FileIO
             Console.WriteLine(lines);
             Console.ReadKey();
         }
+        public static void ReadStreamReader()
+        {
+            String path = @"C:\Users\GURPREET SINGH\Desktop\VisualStudio\FileIOTextFile";
+            using (StreamReader read = File.OpenText(path))
+            {
+                String s = "";
+                while ((s = read.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+            Console.ReadKey();//it will wait for a key press
+        }
         public static void Main(string[] args)
         {
 
 
             FileExist();
+
             ReadFile();
             CopyFile();
             DeleteFile();
             ReadAllText();
+            WriteUsingStreamWriter();
 
         }
     }
