@@ -42,6 +42,14 @@ namespace FileIO
             File.Delete(Path);
             Console.WriteLine("File deleted sucessfully");
         }
+        public static void ReadAllText()
+        {
+            String path = @"C:\Users\GURPREET SINGH\Desktop\VisualStudio\FileIOTextFile";
+            string lines;
+            lines = File.ReadAllText(path);
+            Console.WriteLine(lines);
+            Console.ReadKey();
+        }
         public static void Main(string[] args)
         {
 
@@ -50,6 +58,8 @@ namespace FileIO
             ReadFile();
             CopyFile();
             DeleteFile();
+            ReadAllText();
+
         }
     }
 }
